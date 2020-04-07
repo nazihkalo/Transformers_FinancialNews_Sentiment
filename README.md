@@ -4,9 +4,15 @@ Fine-tuning Transformers from HuggingFace for financials news sentiment
 
 ## Goal : Develop a specialized sentiment analyzer for financial news articles
 
-Financial sentiment analysis differs from general sentiment analysis not only in domain, but also the purpose. The purpose behind financial sentiment analysis is usually guessing how the markets will react with the information presented in the text [9]. Loughran and McDonald (2016) presents a thorough survey of recent works on financial text analysis utilizing machine learning with "bag-of- words" approach or lexicon-based methods [12]. For example, in Loughran and McDonald (2011), they create a dictionary of financial terms with assigned values such as "positive" or "uncertain" and measure the tone of a documents by counting words. Using carefully crafted financial sentiment lexicons such as Loughran and McDonald (2011) [11] may seem a solution because they incorporate existing financial knowledge into textual analysis. However, they are based on "word counting" methods, which come short in analyzing deeper semantic meaning of a given text.
+There are two main types of sentiment analyzers:
+1. Using sentiment-labelled word lists (i.e. dictionaries)
+2. Using sentiment classifiers based on language models trained on huge corpora (IMDB, yelp reviews, etc.)
 
-NLP transfer learning methods look like a promising solution to both of the challenges mentioned above, and are the focus of this thesis. The core idea behind these models is that by train- ing language models on very large corpora and then initializing down-stream models with the weights learned from the language modeling task, a much better performance can be achieved. The initialized layers can range from the single word embedding layer [23] to the whole model [
+For domain-specific sentiment analysis, these latter language models tend to perform poorly. This is especially true for **Financial sentiment analysis**. [This medium article](https://towardsdatascience.com/a-new-way-to-sentiment-tag-financial-news-9ac7681836a7) explains this difference far better than I could here, so please check it out. 
+
+Within finance, those trying to build on open-source resources will likely end up with Notre Dame’s McDonald- Loughran (M-L) word lists, which were created by analysing over fifty thousand earnings reports over the 1994–2008 period. This dictionary has been used by, among others, Google, Fidelity, Citadel, Dow Jones, and S&P Global. However, this "bag-of- words" approach or lexicon-based method in which a dictionary of financial terms is created with values such as "positive" or "uncertain" come short in analyzing deeper semantic meaning of a given text.
+
+Transformers LM & NLP transfer learning methods offer a better solution. These language models are trained on very large corpora and we then use their representations and fine tune initializing down-stream models with the weights learned from the language modeling task. The initialized layers can range from the single word embedding layer to the whole model. In our case we will use the entire model and add a classifier on the top for determining sentiment.
 
 ## Data
 
