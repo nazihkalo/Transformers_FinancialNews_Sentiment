@@ -19,3 +19,12 @@ Here is some information on the dataset used to fine-tune BERT model for financi
 
 Here I compare the sentiment scores from the fine-tuned BERT model to the out of the box TextBlob sentiment analyzer
 
+With the predict function, given a piece of text, we split it into a list of sentences and then predict sentiment for each sentence. The output is written into a dataframe. Predictions are represented in three different columns:
+
+1) logit: probabilities for each class
+2) prediction: predicted label
+3) sentiment_score: sentiment score calculated as: probability of positive - probability of negative
+
+Below we analyze a paragraph taken out of this article from The Economist. For comparison purposes, we also put the sentiments predicted with TextBlob.
+
+`Later that day Apple said it was revising down its earnings expectations in the fourth quarter of 2018, largely because of lower sales and signs of economic weakness in China. The news rapidly infected financial markets. Apple’s share price fell by around 7% in after-hours trading and the decline was extended to more than 10% when the market opened. The dollar fell by 3.7% against the yen in a matter of minutes after the announcement, before rapidly recovering some ground. Asian stockmarkets closed down on January 3rd and European ones opened lower. Yields on government bonds fell as investors fled to the traditional haven in a market storm.`
