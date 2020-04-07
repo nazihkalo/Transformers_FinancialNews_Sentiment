@@ -2,8 +2,11 @@
 Fine-tuning Transformers from HuggingFace for financials news sentiment
 
 
-## Goal 
+## Goal : Develop a specialized sentiment analyzer for financial news articles
 
+Financial sentiment analysis differs from general sentiment analysis not only in domain, but also the purpose. The purpose behind financial sentiment analysis is usually guessing how the markets will react with the information presented in the text [9]. Loughran and McDonald (2016) presents a thorough survey of recent works on financial text analysis utilizing machine learning with "bag-of- words" approach or lexicon-based methods [12]. For example, in Loughran and McDonald (2011), they create a dictionary of financial terms with assigned values such as "positive" or "uncertain" and measure the tone of a documents by counting words. Using carefully crafted financial sentiment lexicons such as Loughran and McDonald (2011) [11] may seem a solution because they incorporate existing financial knowledge into textual analysis. However, they are based on "word counting" methods, which come short in analyzing deeper semantic meaning of a given text.
+
+NLP transfer learning methods look like a promising solution to both of the challenges mentioned above, and are the focus of this thesis. The core idea behind these models is that by train- ing language models on very large corpora and then initializing down-stream models with the weights learned from the language modeling task, a much better performance can be achieved. The initialized layers can range from the single word embedding layer [23] to the whole model [
 
 ## Data
 
