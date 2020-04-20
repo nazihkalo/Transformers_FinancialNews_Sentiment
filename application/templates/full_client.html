@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="custom.css">
 </head>
 
+<head>
+<style>
+h1 {text-align: center;}
+h4 {text-align: center;}
+h5 {text-align: left;}
+li {text-align: left;}
+</style>
+</head>
+<h1>Financial News Sentiment Analyzer using Transfomers</h1>
+<h4>Project by Nazih Kalo</h4>
 
 <body>
     <div class="container col-lg-6">
@@ -20,11 +30,19 @@
                     </div>
                 </div>
                 <div class="card-footer bg-white">
-                    <pre class="card-text api-pre" style="padding-bottom: 0.2cm">
-                        <div class="item" id="api_input">Your input text will be displayed here.</div>
-                        <div class="item" id="api_output"></div>
+                <div class="item" id="api_input">Your input text will be displayed here.</div>
+                <div class="item" id="api_output"></div>
                     </pre>
                 </div>
+                <hr>
+                <h5>  Column Definitions </h2>
+                <ul style="list-style-type:disc;">
+                <li><b>Sentence:</b> Input sentence</li>
+                <li><b>logit:</b> prob score for [negative, positive, neutral], respectively.</li>
+                <li><b>prediction:</b> Predicted sentiment for sentence using custom model.</li>
+                <li><b>sentiment_score:</b> Sentiment Score using custom/fine-tuned BERT model.</li>
+                <li><b>textblob_prediction:</b> Sentiment using out of the box textblob sentiment analyzer.</li>
+                </ul>  
             </div>
         </div>
     </div>

@@ -31,6 +31,7 @@ def api():
     function
     """
     input_data = request.json
+    print(request.args)
     app.logger.info("api_input: " + str(input_data))
     output_data = model_api(input_data)
     app.logger.info("api_output: " + str(output_data))

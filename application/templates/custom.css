@@ -1,3 +1,10 @@
+html,
+body {
+
+  position: relative;
+  top: 50px; 
+}
+
 .api-pre {
     display: flex;
     flex-wrap: wrap;
