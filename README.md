@@ -1,6 +1,7 @@
 # Transformers_FinancialNews_Sentiment
 Fine-tuning Transformers from HuggingFace for financials news sentiment
 
+## [Test out the model with your own financial news here](link)
 
 ## Goal : Develop a specialized sentiment analyzer for financial news articles
 
