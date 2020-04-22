@@ -7,7 +7,8 @@ flask_cors
 pytorch_pretrained_bert
 textblob
 flask_jsonpify
-
+pandas
+numpy
 # import os
 # import sys
 # import logging

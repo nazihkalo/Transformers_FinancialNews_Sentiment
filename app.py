@@ -44,7 +44,7 @@ def api():
 
 @app.route('/')
 def index():
-    return 'Index HTML'
+    return render_template('full_client.html')
 
 # HTTP Errors handlers
 @app.errorhandler(404)
@@ -64,4 +64,4 @@ def server_error(e):
 
 if __name__ == '__main__':
     # This is used when running locally.
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', port = 80, debug=True)
