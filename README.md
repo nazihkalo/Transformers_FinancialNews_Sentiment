@@ -1,7 +1,7 @@
 # Transformers_FinancialNews_Sentiment
 Fine-tuning Transformers from HuggingFace for financials news sentiment
 
-## [Test out the model with your own financial news here](link)
+## [Test out the model with your own financial news here](http://35.188.164.91)
 
 ![app_example](images/app_example.gif)
 
