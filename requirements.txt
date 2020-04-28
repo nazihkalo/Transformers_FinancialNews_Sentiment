@@ -9,18 +9,3 @@ textblob
 flask_jsonpify
 pandas
 numpy
-# import os
-# import sys
-# import logging
-# from flask import Flask, request, jsonify, render_template, render_template_string
-# from flask_cors import CORS
-# import pandas as pd
-# import numpy as np 
-# from serve import get_model_api
-# from flask_jsonpify import jsonpify
-# import json
-# import numpy as np
-# from pytorch_pretrained_bert.modeling import *
-# from pytorch_pretrained_bert.optimization import *
-# from bert_sentiment_utils import predict
-# from textblob import TextBlob

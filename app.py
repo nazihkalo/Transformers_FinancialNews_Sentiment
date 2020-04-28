@@ -48,6 +48,7 @@ def api():
 
     return response
 
+
 @app.route('/')
 def index():
     return render_template('full_client.html')
@@ -72,4 +73,4 @@ if __name__ == '__main__':
     # load the model
     model_api = get_model_api( )
     # This is used when running locally.
-    app.run(host='0.0.0.0', port = int(os.environ.get("PORT", 80)), debug=True, )
+    app.run(host='0.0.0.0', port = int(os.environ.get("PORT", 80)), debug=True)
