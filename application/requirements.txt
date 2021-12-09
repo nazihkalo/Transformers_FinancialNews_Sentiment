@@ -17,7 +17,7 @@ keras-transformer==0.32.0
 Keras==2.3.1
 Keras-Applications==1.0.8
 Flask==1.1.1
-Flask-AppBuilder==2.2.1
+Flask-AppBuilder==3.3.4
 Flask-Babel==0.12.2
 Flask-Caching==1.8.0
 Flask-Compress==1.4.0
